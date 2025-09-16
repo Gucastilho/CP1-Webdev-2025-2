@@ -5,5 +5,7 @@ readme.md com os dados de cada integrante do grupo: NÚMERO DE MATRICULA + NOME 
 HTML index.js
 Javascript main.js
 
+RM567347 - Eduarda da Silva Brito
 RM566970 Gustavo Castilho Gonçalves
+RM567664 Gustavo Oliveira Francischini
 
