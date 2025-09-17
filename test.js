@@ -1,8 +1,3 @@
-function calcular(){
-    // capturaHorarioInicial()
-    // capturaHorarioFinal()
-    // testValores()
-}
 
 function capturaHorarioInicial(){
     // capturar a hora do horario inicial
@@ -15,6 +10,8 @@ function capturaHorarioInicial(){
     console.log(inputMinutosInicio)
     let minutosInicio = inputMinutosInicio.value
     console.log(minutosInicio) 
+    
+    return horaInicio
 }
 
 function capturaHorarioFinal(){
@@ -29,14 +26,22 @@ function capturaHorarioFinal(){
     let minutosFinal = inputMinutosFinal.value
     console.log(minutosFinal)
 
-    return(horaFinal)
+    return horaFinal
 
 }
 
-
-function testValores(){
-    console.log(horaFinal,horaInicio)
+function testValores(x1, x2){
+    console.log(`Test+  ${x1} + ${x2} `)
 }
+
+function calcular(){
+   let horaInicioTest = capturaHorarioInicial()
+   let horaFimTest = capturaHorarioFinal()
+    testValores(horaInicioTest, horaFimTest)
+}
+
+
+
 
 
 
