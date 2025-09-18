@@ -10,6 +10,8 @@ function capturaHoraInicial() {
   let minutosInicio = inputMinutosInicio.value;
   console.log(minutosInicio);
 
+  horaInicio = horaInicio * 60
+
   return horaInicio;
 }
 
@@ -24,6 +26,8 @@ function capturaHoraFinal() {
   console.log(inputMinutosFinal);
   let minutosFinal = inputMinutosFinal.value;
   console.log(minutosFinal);
+
+  horaFinal = horaFinal * 60
 
   return horaFinal;
 }
@@ -47,10 +51,12 @@ function capturaMinFinal() {
 
   return minutosFinal;
 }
+// captura os horarios /////////
+// funções 
 
 
-function testValores(horaIni, horaFim) {
-  resultadoSomas = horaIni - horaFim;
+function testValores(horaIni, horaFim, minIni, minFim) {
+  resultadoSomas = parseInt((horaIni + minIni) - (horaFim + minFim));
 
   if (resultadoSomas < 0) {
     resultadoSomas = resultadoSomas * -1;
@@ -65,13 +71,10 @@ function calcular() {
   let minInicioTest = capturaMinInicial();
   let minFimTest = capturaMinFinal();
 
-  let resultadoHoras = testValores(horaInicioTest, horaFimTest);
-  let resultadosMinutos = testValores(minInicioTest, minFimTest);
-  testValores(horaInicioTest, horaFimTest);
-  testValores(minInicioTest, minFimTest);
+  let resultadoHoras = testValores(horaInicioTest, horaFimTest, minInicioTest, minFimTest);
+  
+  console.log(resultadoHoras)
 
   let elementHora = document.getElementById("horas");
   elementHora.innerText = resultadoHoras;
-  let elementMinutos = document.getElementById("minutos");
-  elementMinutos.innerText = resultadosMinutos;
-}
+  }
