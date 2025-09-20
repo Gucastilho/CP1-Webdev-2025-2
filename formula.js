@@ -14,35 +14,27 @@
 // }
 
 
-let horaIni = 14
-let minIni = 30
+let horaInit = 6
+let minInit = 25
 
-let horaFim = 16
-let minFim = 10
+let horaFim = 3
+let minFim = 50
 
-let converterComecoReuniao = horaIni * 60 + minIni
+let converterComecoReuniao = horaInit * 60 + minInit
 let converterFimReuniao = horaFim * 60 + minFim
 
-console.log(converterComecoReuniao, converterFimReuniao)
+console.log(`Step 1:\nTempo Inicial = ${converterComecoReuniao}\nTempo Final = ${converterFimReuniao}`)
 
-calculaDif = converterComecoReuniao - converterFimReuniao
+let calculaDif = ((converterFimReuniao - converterComecoReuniao) + 1440) % 1440
 
-console.log(calculaDif)
+console.log(`\nStep 2:\nDiferença (minutos) = ${calculaDif}`)
 
-if(calculaDif <0){
-   calculaDif = calculaDif * -1
-}else{}
+let minResult = calculaDif % 60
+let horasResult = (calculaDif - minResult) / 60
 
-console.log(calculaDif)
+console.log(`\nStep 3:\nA reunião durou ${horasResult} horas e ${minResult} minutos`)
 
-convertMod =  Math.floor(calculaDif / 60)
-convertMod = convertMod.toFixed(0)
 
-console.log(convertMod)
-
-convertRest = calculaDif % 60
-
-console.log(convertRest)
 
 
 
