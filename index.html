@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
@@ -8,31 +14,33 @@
   </head>
 
   <body>
-    <h1>Webdev CP01 - Ex01</h1>
-    <div>
-      <h3>Calcular o tempo de duração da reunião.</h3>
-      <div>
-        <span><strong>Início:</strong></span>
-        <span>Horas</span>
-        <input style="width: 30px" id="horaIni" type="text" />
-        <span>Minutos</span>
-        <input style="width: 30px" id="minIni" type="text" />
+    <div class="full-box">
+      <h1>Webdev CP01 - Ex01</h1>
+      <div class="main-box">
+        <h3>Calcular o tempo de duração da reunião.</h3>
+        <div>
+          <span><strong>Início:</strong></span>
+          <span>Horas</span>
+          <input id="horaIni" type="text" />
+          <span>Minutos</span>
+          <input id="minIni" type="text" />
+        </div>
+        <div>
+          <span><strong>Término:</strong></span>
+          <span>Horas</span>
+          <input id="horaFim" type="text" />
+          <span>Minutos</span>
+          <input id="minFim" type="text" />
+        </div>
+        <div>
+          <button onclick="calcular()">Calcular duração</button>
+        </div>
       </div>
-      <div>
-        <span><strong>Término:</strong></span>
-        <span>Horas</span>
-        <input style="width: 30px" id="horaFim" type="text" />
-        <span>Minutos</span>
-        <input style="width: 30px" id="minFim" type="text" />
-      </div>
-      <div style="margin-top: 10px">
-        <button onclick="calcular()">Calcular duração</button>
-      </div>
+      <h2>
+        Duração:
+        <span id="horas">00</span>:<span id="minutos">00</span>
+      </h2>
     </div>
-    <h2>
-      Duração:
-      <span id="horas">00</span>:<span id="minutos">00</span>
-    </h2>
     <script src="./main.js"></script>
   </body>
 </html>
