@@ -35,7 +35,7 @@ if(calculaDif <0){
 
 console.log(calculaDif)
 
-convertMod =  calculaDif / 60
+convertMod =  Math.floor(calculaDif / 60)
 convertMod = convertMod.toFixed(0)
 
 console.log(convertMod)

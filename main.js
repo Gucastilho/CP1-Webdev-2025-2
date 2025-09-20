@@ -10,7 +10,7 @@ function capturaHoraInicial() {
   let minutosInicio = inputMinutosInicio.value;
   console.log(minutosInicio);
 
-  horaInicio = horaInicio * 60
+  horaInicio = parseInt(horaInicio * 60)
 
   return horaInicio;
 }
@@ -27,7 +27,7 @@ function capturaHoraFinal() {
   let minutosFinal = inputMinutosFinal.value;
   console.log(minutosFinal);
 
-  horaFinal = horaFinal * 60
+  horaFinal = parseInt(horaFinal * 60)
 
   return horaFinal;
 }
@@ -39,7 +39,7 @@ function capturaMinInicial() {
   let minutosInicio = inputMinutosInicio.value;
   console.log(minutosInicio);
 
-  return minutosInicio;
+  return parseInt(minutosInicio);
 }
 
 function capturaMinFinal() {
@@ -49,7 +49,7 @@ function capturaMinFinal() {
   let minutosFinal = inputMinutosFinal.value;
   console.log(minutosFinal);
 
-  return minutosFinal;
+  return parseInt(minutosFinal);
 }
 // captura os horarios /////////
 // funções 
@@ -62,19 +62,29 @@ function testValores(horaIni, horaFim, minIni, minFim) {
     resultadoSomas = resultadoSomas * -1;
   } else {
   }
-  return resultadoSomas;
+  return parseInt(resultadoSomas);
 }
 
 function calcular() {
-  let horaInicioTest = capturaHoraInicial();
-  let horaFimTest = capturaHoraFinal();
-  let minInicioTest = capturaMinInicial();
-  let minFimTest = capturaMinFinal();
+  let horaInicioTest = parseInt(capturaHoraInicial());
+  let horaFimTest = parseInt(capturaHoraFinal());
+  let minInicioTest = parseInt(capturaMinInicial());
+  let minFimTest = parseInt(capturaMinFinal());
+  let resultadoSomasHorasMin = parseInt(testValores(horaInicioTest, horaFimTest, minInicioTest, minFimTest))
 
-  let resultadoHoras = testValores(horaInicioTest, horaFimTest, minInicioTest, minFimTest);
+  console.log(horaInicioTest,horaFimTest, minInicioTest, minFimTest)
   
-  console.log(resultadoHoras)
-
-  let elementHora = document.getElementById("horas");
-  elementHora.innerText = resultadoHoras;
+  
+  console.log(resultadoSomasHorasMin)
+  valorHoras = Math.floor(resultadoSomasHorasMin / 60)
+  console.log(valorHoras)
+  valorMinutos = resultadoSomasHorasMin % 60
+  console.log(valorMinutos)
+  
+  
+  let imprimeHora = document.getElementById("horas");
+  imprimeHora.innerText = valorHoras;
+  
+  let imprimeMinutos = document.getElementById("minutos")
+  imprimeMinutos.innerText = valorMinutos
   }
