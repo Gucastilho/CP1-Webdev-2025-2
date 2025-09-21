@@ -14,7 +14,7 @@
 // }
 
 
-let horaInit = 6
+let horaInit = 23
 let minInit = 25
 
 let horaFim = 3
